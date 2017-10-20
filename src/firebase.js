@@ -1,11 +1,12 @@
 import firebase from 'firebase';
 
 const config = {
-  apiKey: 'AIzaSyAhWMYWhBG2UvsNMZ-qVLbaqVZ5aTzwsNU',
-  authDomain: 'hot-takes.firebaseapp.com',
-  databaseURL: 'https://hot-takes.firebaseio.com',
-  storageBucket: 'hot-takes.appspot.com',
-  messagingSenderId: '823384132241'
+  apiKey: "AIzaSyArpanhCMg569y9hTce5B4OdthQtC4l2VE",
+  authDomain: "chatroom420-9d2bc.firebaseapp.com",
+  databaseURL: "https://chatroom420-9d2bc.firebaseio.com",
+  projectId: "chatroom420-9d2bc",
+  storageBucket: "chatroom420-9d2bc.appspot.com",
+  messagingSenderId: "176709194349"
 };
 
 firebase.initializeApp(config);

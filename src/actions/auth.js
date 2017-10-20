@@ -1,16 +1,11 @@
+import { auth, googleAuthProvider } from '../firebase';
+
 export const signIn = () => {
-  return(dispatch)=> {
+  return (dispatch) => {
     dispatch({ type: 'ATTEMPTING_LOGIN' });
-      setTimeout(()=>{
-        dispatch(signedIn(
-          {
-            email: 'bill@example.com',
-            displayName: 'Bill Murray',
-            photoURL: 'http://www.fillmurray.com/200/200',
-            uid: 'firstUser'
-          }
-        ))
-      }, 2000); 
+    auth.signInWithPopup(googleAuthProvider).then(({ user }) => {
+      dispatch(signedIn(user));
+    }); 
   };
 };
 
