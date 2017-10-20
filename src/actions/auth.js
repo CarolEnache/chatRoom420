@@ -14,7 +14,12 @@ export const signIn = () => {
 };
 
 export const signOut = () => {
-  return {
-    type: 'SIGN_OUT'
+  return (dispatch) => {
+    dispatch({ type: 'ATTEMPTING_LOGIN' });
+    setTimeout(() => {
+      dispatch({
+        type: 'SIGN_OUT',
+      })
+    }, 2000);
   };
 };
